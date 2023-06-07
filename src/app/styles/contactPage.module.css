@@ -1,0 +1,8 @@
+.body {
+  background-image: url(formBg.jpg);
+}
+
+input,
+textarea {
+  outline: none;
+}
