@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="sA_Y9uRtjtkf9Zq8tEQhNuJI5Qy94RCzROdc8oJUUoE"
         />
-        <title>Web Dev Tutor</title>
+        <title>Houska dev</title>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
