@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       if (document.visibilityState === "visible") {
         document.title = "Houska dev";
       } else {
-        document.title = "Pojeďte s námi 🌍";
+        document.title = "Počkáme na vás ";
       }
     });
   }, []);
