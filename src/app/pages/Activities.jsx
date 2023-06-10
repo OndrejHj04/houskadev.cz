@@ -16,14 +16,12 @@ function Activities() {
     <div className="">
       <img src="bounding.svg" alt="" />
       <div
-        className={`${style.body} px-5 flex justify-between md:flex-row flex-col items-center`}
+        className={`${style.body} px-5 flex justify-between md:flex-row flex-col items-center py-5`}
       >
         {data.map(({ count, label }) => (
           <div
             key={count}
-            className={`${
-              onlyWidth > 767 ? style.blockDesktop : style.blockMobile
-            } md:w-1/5 w-1/2  p-2 rounded-2xl border-2 flex flex-col justify-between my-5`}
+            
           >
             <p className="text-6xl text-center">
               <CountUp end={count} />
