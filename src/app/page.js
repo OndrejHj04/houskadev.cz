@@ -8,16 +8,15 @@ import Gallery from "./pages/Gallery";
 import ContactPage from "./pages/ContactPage";
 import Footer from "./pages/Footer";
 import Head from "next/head";
-import AnimText from "./pages/AnimText";
 
 export default function Home() {
   return (
     <div>
       <div className="flex flex-col">
         <MenuPage />
-        <div className="overflow-y-scroll overflow-x-hidden flex-1">
+        <div className="overflow-y-scroll flex-1">
           <IntroPage />
-          <AnimText />
+          <Facility />
         </div>
       </div>
     </div>

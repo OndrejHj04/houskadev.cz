@@ -1,24 +1,25 @@
+import Image from "next/image";
+import styles from "../styles/facility.module.css";
 function Facility() {
   return (
-    <div className="md:grid md:grid-rows-2 md:grid-cols-2 p-2 mb-10">
-      <div className="text-4xl">
-        <h3>Náš</h3>
-        <h3>areál</h3>
+    <div className="md:grid md:grid-rows-2 md:grid-cols-2 p-2">
+      <div className="text-4xl my-auto">
+        <h3>
+          Děláme weby pro rok 2023
+        </h3>
       </div>
-      <div className="row-span-2 relative md:mb-0 mb-10">
-        <img src="forrest.jpg" className="w-3/4 max-w-2xl" alt="" />
-        <img
-          src="tree.jpg"
-          className="absolute w-2/4 left-1/2 top-1/2 max-w-2xl"
-          alt=""
-        />
+      <div className="row-span-2 relative flex">
+        <div className="h-full mx-auto flex relative md:mb-0 mb-10">
+          <img src="screen.png" className="m-auto" />
+          <img src="mobile.png" className="absolute md:w-36 w-28 -bottom-3 left-5" />
+        </div>
       </div>
       <div>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quae
-          repellat voluptate, accusamus, fugiat ad rerum ipsum necessitatibus
-          impedit nesciunt iusto ea sed, aliquam autem ipsam placeat doloribus
-          voluptas? Doloribus?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cum
+          facilis facere provident in dolore perspiciatis optio sunt nulla rem,
+          illum soluta nisi, earum, debitis obcaecati numquam? Ipsa, cumque
+          molestiae.
         </p>
       </div>
     </div>
