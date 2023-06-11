@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       if (document.visibilityState === "visible") {
         document.title = "Houska dev";
       } else {
-        document.title = "Počkáme na vás ";
+        document.title = "Programujeme weby";
       }
     });
   }, []);
