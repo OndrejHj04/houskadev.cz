@@ -11,14 +11,10 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div>
-      <div className="flex flex-col">
-        <MenuPage />
-        <div className="overflow-y-scroll flex-1">
-          <IntroPage />
-          <Facility />
-        </div>
-      </div>
+    <div className="flex flex-col">
+      <MenuPage />
+      <IntroPage />
+      <Facility />
     </div>
   );
 }
