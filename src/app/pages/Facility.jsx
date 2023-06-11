@@ -1,8 +1,12 @@
+import styles from "../styles/facility.module.css";
+
 function Facility() {
   return (
     <div className="md:grid md:grid-rows-2 md:grid-cols-2 p-2 mb-20">
       <div className="text-4xl my-auto">
-        <h3>Děláme weby pro rok 2023</h3>
+        <h3>
+          Děláme weby pro rok <span className="relative">2023 <span className={styles.underline}></span></span>
+        </h3>
       </div>
       <div className="row-span-2 relative flex">
         <div className="h-full mx-auto flex relative md:mb-0 mb-10">

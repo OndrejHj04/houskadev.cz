@@ -1,17 +1,15 @@
-.title {
-    padding: 30px 0 8px;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .title::before {
-    content: "";
-    position: absolute;
-    left: 45px;
-    bottom: 6px;
-    width: 95px;
-    height: 14px;
-    transform: skew(-12deg) translateX(-50%);
-    background: #53dc2e;
-    z-index: -1;
-  }
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 100px;
+  height: 10px;
+  left: -45px;
+  transform: skew(-12deg) translateX(-50%);
+  background: #d3a1c4;
+  z-index: -1;
+}
