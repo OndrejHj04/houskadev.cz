@@ -3,7 +3,6 @@ function IntroPage() {
   return (
     <div
       className="md:py-20 py-10 md:px-10 px-2"
-      style={{ backgroundImage: `url(.jpg)` }}
     >
       <h1
         className={`${styles.title} font-bold text-4xl text-center w-fit mx-auto`}
