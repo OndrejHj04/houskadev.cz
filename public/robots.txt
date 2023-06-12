@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.houskadev.cz/
+
+# Sitemaps
+Sitemap: https://www.houskadev.cz/sitemap.xml
