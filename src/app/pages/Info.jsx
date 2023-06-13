@@ -1,3 +1,4 @@
+"use client";
 import styles from "../styles/info.module.css";
 
 export default function Info() {
