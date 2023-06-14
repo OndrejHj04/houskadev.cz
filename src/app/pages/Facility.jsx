@@ -2,7 +2,7 @@ import styles from "../styles/facility.module.css";
 
 function Facility() {
   return (
-    <div className="md:grid md:grid-rows-2 md:grid-cols-2 p-2 mb-20">
+    <div className="md:grid md:grid-rows-2 md:grid-cols-2 p-2 mb-20 max-w-7xl mx-auto">
       <div className="text-4xl my-auto">
         <h3>
           Děláme weby pro rok <span className="relative">2023 <span className={styles.underline}></span></span>
