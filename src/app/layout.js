@@ -23,6 +23,12 @@ export default function RootLayout({ children }) {
           content="sA_Y9uRtjtkf9Zq8tEQhNuJI5Qy94RCzROdc8oJUUoE"
         />
         <title>Houska dev</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
