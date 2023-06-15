@@ -2,41 +2,41 @@ import styles from "../styles/contact.module.css";
 export default function Contact() {
   return (
     <div className="mx-auto w-full max-w-7xl flex md:flex-row flex-col mb-16">
-      <div className="flex-1 mx-auto flex flex-col max-w-2xl w-full">
+      <div className="flex-1 mx-2 flex flex-col ">
         <div>
           <div className={`${styles.zig_zag_bot} rotate-180`} />
           <div className={`${styles.puzzleTop} p-2`}>
-            <h1 className="md:text-4xl text-xl">A toto ještě není všechno!</h1>
+            <h1 className="sm:text-4xl text-3xl">Co dalšího umíme?</h1>
           </div>
           <div className={styles.zig_zag_bot} />
         </div>
         <div
-          className={`flex-1 border-black py-2 flex flex-col sm:text-base text-sm  ${styles.bill}`}
+          className={`flex-1 border-black py-2 flex flex-col ${styles.bill}`}
         >
           <div className="flex justify-between">
             <p className="font-semibold">Účtenka 011</p>
             <p className="font-semibold">Datum: 31. 08. 2004</p>
           </div>
           <div className="w-full border-2 border-dashed border-black mb-1" />
-          <div className="flex justify-between">
-            <p>Luxusní animace</p>
-            <p>...k nezaplacení!</p>
+          <div className="flex justify-between flex-col sm:flex-row sm:mb-0 mb-2">
+            <p>Luxusní animace 🥇</p>
+            <p className="md:ml-0 ml-3">Cena: k nezaplacení!</p>
           </div>
-          <div className="flex justify-between">
-            <p>Sexy galerie</p>
-            <p>...k nezaplacení!</p>
+          <div className="flex justify-between flex-col sm:flex-row sm:mb-0 mb-2">
+            <p>Sexy galerie 🤤</p>
+            <p className="md:ml-0 ml-3">Cena: k nezaplacení!</p>
           </div>
-          <div className="flex justify-between">
-            <p>Vyhodnocení návštěvnosti</p>
-            <p>...k nezaplacení!</p>
+          <div className="flex justify-between flex-col sm:flex-row sm:mb-0 mb-2">
+            <p>Vyhodnocení návštěvnosti 🔭</p>
+            <p className="md:ml-0 ml-3">Cena: k nezaplacení!</p>
           </div>
-          <div className="flex justify-between">
-            <p>Kontaktní formulář</p>
-            <p>...k nezaplacení!</p>
+          <div className="flex justify-between flex-col sm:flex-row sm:mb-0 mb-2">
+            <p>Kontaktní formulář 📇</p>
+            <p className="md:ml-0 ml-3">Cena: k nezaplacení!</p>
           </div>
-          <div className="flex justify-between">
-            <p className="line-through">Taxi služba z letiště</p>
-            <p className="line-through">...basa piv</p>
+          <div className="flex justify-between flex-col sm:flex-row sm:mb-0 mb-2">
+            <p className="line-through">Taxi služba z letiště ✈️</p>
+            <p className="line-through md:ml-0 ml-3">Cena: k nezaplacení!</p>
           </div>
           <div className="w-full border-2 border-dotted border-black mb-1" />
           <div className="flex justify-between">
