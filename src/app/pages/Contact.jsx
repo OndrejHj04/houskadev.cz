@@ -1,6 +1,32 @@
+"use client";
 import moment from "moment/moment";
 import styles from "../styles/contact.module.css";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_API,
+        process.env.NEXT_PUBLIC_TEMPLATE_API,
+        form.current,
+        process.env.NEXT_PUBLIC_ACC_API
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="mx-auto w-full max-w-7xl flex md:flex-row flex-col mb-16">
       <div className="flex-1 mx-2 flex flex-col ">
@@ -51,20 +77,25 @@ export default function Contact() {
       <div className="mx-auto  border-2 shadow-2xl  p-2 rounded-2xl max-w-xl">
         <h2 className="text-3xl text-center font-semibold">Napište nám!</h2>
         <h3>...a určitě se na něčem domluvíme.</h3>
-        <div className="flex flex-col">
-          <input className="outline-none" placeholder="Váš email" />
+        <form onSubmit={sendEmail} className="flex flex-col" ref={form}>
+          <input
+            className="outline-none"
+            placeholder="Váš email"
+            name="from_email"
+          />
           <div className="h-0.5 w-full bg-gray-200"></div>
           <textarea
             rows="8"
             className="outline-none resize-none"
             placeholder="Text zprávy..."
+            name="message"
           />
           <button
             className={`${styles.btn} text-white font-bold rounded-full `}
           >
             ODESLAT
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
