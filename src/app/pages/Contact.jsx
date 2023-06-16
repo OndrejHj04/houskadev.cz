@@ -1,3 +1,4 @@
+import moment from "moment/moment";
 import styles from "../styles/contact.module.css";
 export default function Contact() {
   return (
@@ -15,7 +16,9 @@ export default function Contact() {
         >
           <div className="flex justify-between">
             <p className="font-semibold">Účtenka 011</p>
-            <p className="font-semibold">Datum: 31. 08. 2004</p>
+            <p className="font-semibold">
+              Datum: {moment().format("DD. MM. YYYY")}
+            </p>
           </div>
           <div className="w-full border-2 border-dashed border-black mb-1" />
           <div className="flex justify-between flex-col sm:flex-row sm:mb-0 mb-2">
@@ -39,23 +42,28 @@ export default function Contact() {
             <p className="line-through md:ml-0 ml-3">Cena: k nezaplacení!</p>
           </div>
           <div className="w-full border-2 border-dotted border-black mb-1" />
-          <div className="flex justify-between">
+          <div className="flex justify-between text-lg font-semibold">
             <p>Cena celkem</p>
             <p>...k nezaplacení!</p>
           </div>
         </div>
       </div>
-      <div className="mx-auto  border-2 shadow-2xl p-2 rounded-2xl max-w-xl">
+      <div className="mx-auto  border-2 shadow-2xl  p-2 rounded-2xl max-w-xl">
         <h2 className="text-3xl text-center font-semibold">Napište nám!</h2>
         <h3>...a určitě se na něčem domluvíme.</h3>
         <div className="flex flex-col">
-          <input className="outline-none" placeholder="Předmět" />
+          <input className="outline-none" placeholder="Váš email" />
           <div className="h-0.5 w-full bg-gray-200"></div>
           <textarea
             rows="8"
             className="outline-none resize-none"
             placeholder="Text zprávy..."
           />
+          <button
+            className={`${styles.btn} text-white font-bold rounded-full `}
+          >
+            ODESLAT
+          </button>
         </div>
       </div>
     </div>
