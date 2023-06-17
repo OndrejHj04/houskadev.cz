@@ -36,8 +36,18 @@ export default function Info() {
             ];
             return (
               <motion.div
-                initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                variants={{
+                  visible: { x: 0, opacity: 100, visibility: "visible" },
+                  hidden: {
+                    x: i % 2 === 0 ? -200 : 200,
+                    opacity: 0,
+                    visibility: "hidden",
+                  },
+                }}
                 className={`${gridVariants[i]} bg-white p-2 rounded-2xl max-w-xl w-11/12 mx-auto md:mb-0 mb-3`}
                 key={i}
               >
