@@ -11,8 +11,8 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
     const { from_email, message } = form.current;
-    
-    if(!message.value.length){
+
+    if (!message.value.length) {
       return Notify.failure("Vyplňte prosím text zprávy.");
     }
 
@@ -27,14 +27,14 @@ export default function Contact() {
         (result) => {
           console.log(result.text);
           Notify.success("Zpráva je na cestě.");
-          message.value = ""
-          from_email.value = ""
+          message.value = "";
+          from_email.value = "";
         },
         (error) => {
           console.log(error.text);
           Notify.failure("Zprávu se nepodařilo odeslat.");
-          message.value = ""
-          from_email.value = ""
+          message.value = "";
+          from_email.value = "";
         }
       );
   };
@@ -104,7 +104,7 @@ export default function Contact() {
             name="message"
           />
           <button
-            className={`${styles.btn} text-white font-bold rounded-full `}
+            className={`${styles.btn} text-white font-semibold w-fit px-2 py-1 rounded-xl ml-auto hover:scale-105 transition-all`}
           >
             ODESLAT
           </button>
