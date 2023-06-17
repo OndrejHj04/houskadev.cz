@@ -3,12 +3,18 @@ import moment from "moment/moment";
 import styles from "../styles/contact.module.css";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { Notify } from "notiflix";
 
 export default function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const { from_email, message } = form.current;
+    
+    if(!message.value.length){
+      return Notify.failure("Vyplňte prosím text zprávy.");
+    }
 
     emailjs
       .sendForm(
@@ -20,9 +26,15 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          Notify.success("Zpráva je na cestě.");
+          message.value = ""
+          from_email.value = ""
         },
         (error) => {
           console.log(error.text);
+          Notify.failure("Zprávu se nepodařilo odeslat.");
+          message.value = ""
+          from_email.value = ""
         }
       );
   };
@@ -82,6 +94,7 @@ export default function Contact() {
             className="outline-none"
             placeholder="Váš email"
             name="from_email"
+            type="email"
           />
           <div className="h-0.5 w-full bg-gray-200"></div>
           <textarea
