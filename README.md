@@ -1,2 +1,2 @@
-1. oznámení po odeslání emailu
 2. animace
+3. onClick iconky v footer

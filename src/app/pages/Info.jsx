@@ -1,5 +1,6 @@
 "use client";
 import styles from "../styles/info.module.css";
+import { motion } from "framer-motion";
 
 export default function Info() {
   const data = [
@@ -34,13 +35,15 @@ export default function Info() {
               "col-start-1 row-start-3",
             ];
             return (
-              <div
+              <motion.div
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 className={`${gridVariants[i]} bg-white p-2 rounded-2xl max-w-xl w-11/12 mx-auto md:mb-0 mb-3`}
                 key={i}
               >
                 <h4 className="text-2xl font-semibold">{item.title}</h4>
                 <p>{item.text}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
